@@ -1,0 +1,14 @@
+- name: java
+  action: yum pkg="{{java}}" state=present
+- name: download tomcat
+  get_url:
+    url: "{{tomcat_url}}"
+    dest: /mnt
+
+   
+  notify: 
+     - unarchive
+     - permission  
+     - deploy  
+     - start 
+      

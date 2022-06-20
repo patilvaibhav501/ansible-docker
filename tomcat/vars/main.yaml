@@ -1,0 +1,3 @@
+java: java-1.8.0-openjdk-debug.x86_64 
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip
+

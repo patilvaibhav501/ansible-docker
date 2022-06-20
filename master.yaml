@@ -1,0 +1,10 @@
+--- #my java-project
+- hosts: server
+  user: sysadmin
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  roles:
+    - tomcat
+    

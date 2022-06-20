@@ -1,0 +1,11 @@
+- name: unarchive
+  ansible.builtin.unarchive:
+                src: /mnt/apache-tomcat-9.0.64.zip
+                dest: /mnt
+                remote_src: yes
+- name: deploy
+  action: copy src=LoginWebApp.war dest=/mnt/apache-tomcat-9.0.64/webapps/
+- name: permission
+  shell: chmod -R 777 /mnt/apache-tomcat-9.0.64/bin*
+- name: start
+  shell: nohup /mnt/apache-tomcat-9.0.64/bin/startup.sh &
