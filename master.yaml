@@ -1,5 +1,5 @@
 --- #my java-project
-- hosts: server
+- hosts: all
   user: ansible
   become: yes
   connection: ssh
